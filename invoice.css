@@ -1,341 +1,109 @@
-body {
-  font-family: Sans-Serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 5px;
+/* =====================================================
+   OVERRIDE WARNA - Putih & Hitam
+   Tempel paling bawah CSS
+===================================================== */
+
+/* Semua teks */
+body,
+body * {
+    color: #000 !important;
 }
 
+/* Link */
 a {
-  color: #000;
+    color: #000 !important;
 }
 
-.invoice {
-  background-color: white;
-  color: black;
-  padding: 16px;
+/* Meta */
+.meta,
+.supplier,
+.name,
+.address,
+.note {
+    color: #000 !important;
 }
 
-.meta {
-  color: #000;
-}
-
-.header .title {
-  font-size: 300%;
-  font-weight: bold;
-}
-
-.header .meta {
-  text-transform: uppercase;
-}
-
-.info .meta {
-  text-transform: uppercase;
-}
-
-.info .meta::after {
-  content: " :";
-}
-
-.supplier {
-  color: #000;
-  display: block;
-}
-
-.block {
-  padding-left: 5px;
-  display: block;
-}
-
+/* Section */
 .client,
 .items,
 .summary {
-  padding: 1px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  background: #fff;
-  border: 1px solid #000;
-  -webkit-print-color-adjust: exact !important;
-  color-adjust: exact !important;
+    background: #fff !important;
+    border: 1px solid #000 !important;
 }
 
+/* Judul section */
 .client .title,
 .summary .title {
-  margin-left: 4px;
-  color: #000;
-  background: #fff;
-  text-transform: uppercase;
+    background: #fff !important;
+    color: #000 !important;
+    border-bottom: 1px solid #000 !important;
 }
 
+/* Detail */
 .client .details,
 .summary .details {
-  padding: 4px;
-  background-color: white;
-  color: #000;
+    background: #fff !important;
+    color: #000 !important;
 }
 
+/* Tabel */
 table.items {
-  width: 100%;
-  border: 1px solid #000;
-  border-collapse: collapse;
+    border: 1px solid #000 !important;
 }
 
+/* Header tabel */
 table.items th {
-  text-align: left;
-  background: #fff;
-  color: #000;
-  text-transform: uppercase;
-  font-weight: normal;
-  padding: 4px;
-  border-bottom: 1px solid #000;
+    background: #fff !important;
+    color: #000 !important;
+    border-bottom: 1px solid #000 !important;
 }
 
+/* Isi tabel */
 table.items td {
-  background-color: white;
-  color: #000;
-  padding: 4px;
+    background: #fff !important;
+    color: #000 !important;
 }
 
-.client .title,
-.summary .title,
-table.items th,
-.help .title {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.money,
-.number {
-  text-align: right;
-}
-
-.name {
-  color: #000;
-}
-
-.address {
-  padding-bottom: 1em;
-}
-
-div.date-tag {
-  display: inline-block;
-  min-width: 80px;
-}
-
-div.top {
-  display: flex;
-  width: 100%;
-  padding: 0px;
-  justify-content: space-between;
-}
-
-div.summary {
-  display: flex;
-  width: 100%;
-  padding: 0px;
-  align-items: flex-end;
-}
-
-div.summary .part,
+/* Total */
 div.summary .total {
-  padding: 10px;
+    background: #fff !important;
+    color: #000 !important;
+    border-left: 1px solid #000 !important;
 }
 
-div.summary .part {
-  width: 20%;
-  padding-right: 20px;
-}
-
-div.summary .total {
-  display: block;
-  flex-grow: 1;
-  background: #fff;
-  color: #000;
-  border-left: 1px solid #000;
-  font-size: 140%;
-}
-
-div.summary {
-  border-top-right-radius: 2em;
-  border-bottom-right-radius: 2em;
-}
-
-div.summary .total {
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
-}
-
-div.summary .title,
-div.summary .details {
-  text-align: right;
-}
-
-div.summary::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.phone::before {
-  content: "\260e";
-  margin-right: 0.5em;
-}
-
-.email::before {
-  content: "\2709";
-  margin-right: 0.5em;
-}
-
-.thanks {
-  text-align: right;
-  color: #000;
-  font-size: 200%;
-}
-
-div.instructions,
-.newlined,
-p.note {
-  white-space: pre-line;
-}
-
-div.paid {
-  position: relative;
-  left: 40%;
-  color: red;
-  rotate: 15deg;
-  font-size: 80px;
-  top: 20px;
-  border: 5px solid red;
-  float: left;
-  font-weight: bolder;
-}
-
-.app {
-  position: relative;
-}
-
-@media print {
-  div.print {
-    display: none;
-  }
-}
-
-div.print {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-}
-
+/* Tombol print */
 div.print a {
-  background: #fff;
-  color: #000;
-  border: 1px solid #000;
-  display: block;
-  font-size: 200%;
-  text-decoration: none;
-  padding: 0.25em;
-  padding-top: 0.5em;
-  padding-right: 0.5em;
-  border-top-right-radius: 0.5em;
-  text-transform: uppercase;
+    background: #fff !important;
+    color: #000 !important;
+    border: 1px solid #000 !important;
 }
 
 div.print a:hover {
-  background: #f5f5f5;
+    background: #f5f5f5 !important;
 }
 
-.done {
-  text-decoration: line-through;
-}
-
-div.column-name {
-  display: inline-block;
-}
-
-.column-name {
-  background: #fff;
-  color: #000;
-  border: 1px solid #000;
-  margin: 2px;
-  padding: 2px;
-  border-radius: 2px;
-  font-style: normal;
-}
-
-.column-recognized {
-  background: #fff;
-}
-
-.column-expected {
-  background: #fff;
-}
-
-.column-ignored {
-  background: #fff;
-}
-
+/* Help */
 .help {
-  padding: 1px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  background: #fff;
-  color: #000;
-  border: 1px solid #000;
+    background: #fff !important;
+    color: #000 !important;
+    border: 1px solid #000 !important;
 }
 
-.help .details {
-  padding: 4px;
+.help * {
+    color: #000 !important;
 }
 
-.help table {
-  border: none;
+/* Badge */
+.column-name,
+.column-recognized,
+.column-expected,
+.column-ignored {
+    background: #fff !important;
+    color: #000 !important;
+    border: 1px solid #000 !important;
 }
 
-.help td.key {
-  text-align: right;
-}
-
-.help table {
-  padding-bottom: 3px;
-}
-
-.help-close {
-  display: float;
-  float: right;
-  max-width: 150px;
-  padding: 5px;
-  border-left: 1px solid #000;
-  border-bottom-left-radius: 5px;
-  font-size: 80%;
-  font-style: italic;
-}
-
-.help pre {
-  display: inline-block;
-  background: #ddd;
-  color: #000;
-  padding: 0.25em;
-  margin-left: 1em;
-}
-
-.help .title {
-  margin-left: 4px;
-  text-transform: uppercase;
-}
-
-.status {
-  padding: 4px;
-}
-
-.status .button {
-  display: inline-block;
-  text-decoration: none;
-  color: #000;
-  background: #ddd;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  border-radius: 0.25em;
+/* Thank you */
+.thanks {
+    color: #000 !important;
 }
