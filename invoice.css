@@ -50,7 +50,7 @@ a {
   padding: 1px;
   margin-top: 1em;
   margin-bottom: 1em;
-  background: #000000;
+  background: #c5c5c5;
   -webkit-print-color-adjust: exact !important;
   color-adjust: exact !important;
 }
@@ -68,7 +68,7 @@ a {
 
 table.items {
   width: 100%;
-  border: 1px solid #000000;
+  border: 1px solid #c5c5c5;
   border-collapse: collapse;
 }
 
