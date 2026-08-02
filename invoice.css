@@ -116,43 +116,48 @@ div.top {
 
 /* Summary */
 
-div.summary {
-  width: 260px;          /* sebelumnya 320px */
-  margin-top: 10px;
-  margin-left: auto;
-  border: 1px solid #000;
-  background: #fff;
+div.summary{
+    width:220px;
+    margin-left:auto;
+    padding:0 !important;
+    background:#fff;
+    border:1px solid #000;
 }
 
-div.summary .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 12px;     /* sebelumnya 10px 15px */
-  min-height: 26px;      /* supaya tidak terlalu tinggi */
-  border-bottom: 1px solid #ddd;
+div.summary .row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:6px 10px;
+
+    min-height:unset;
+    height:28px;
+
+    border-bottom:1px solid #ddd;
 }
 
 div.summary .row:last-child {
   border-bottom: none;
 }
 
-div.summary .title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #000;
+div.summary .title,
+div.summary .details{
+
+    padding:0 !important;
+    margin:0;
+
+    font-size:13px;
+    line-height:13px;
 }
 
-div.summary .details {
-  font-size: 14px;
-  color: #000;
-  text-align: right;
-}
+div.summary .total-row{
 
-div.summary .total-row {
-  border-top: 2px solid #000;
-  font-size: 16px;
-  font-weight: bold;
+    height:34px;
+
+    border-top:2px solid #000;
+
+    font-size:15px;
 }
 
 div.summary .total-row .title,
