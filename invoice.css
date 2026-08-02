@@ -1,1 +1,349 @@
+body {
+  font-family: Sans-Serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5px;
+}
 
+a {
+  color: #0000EE;
+}
+
+.invoice {
+  background-color: white;
+  color: black;
+  padding: 16px;
+}
+
+.meta {
+  color: #000000;
+}
+
+.header .title {
+  font-size: 300%;
+  font-weight: bold;
+}
+
+.header .meta {
+  text-transform: uppercase;
+}
+
+.info .meta {
+  text-transform: uppercase;
+}
+
+.info .meta::after {
+  content: " :";
+}
+
+.supplier {
+  color: #4682B4;
+  display: block;
+}
+
+.block {
+  padding-left: 5px;
+  display: block;
+}
+
+.client, .items {
+  padding: 1px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background: #c5c5c5;
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
+}
+
+.client .title, {
+  margin-left: 4px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.client .details, .summary .details {
+  padding: 4px;
+  background-color: white;
+}
+
+/* ===========================
+   ITEM TABLE
+=========================== */
+
+table.items {
+  width: 100%;
+  border: 1px solid #ff8000;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+table.items th {
+  background: #ff8000;
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: left;
+  padding: 8px;
+}
+
+table.items td {
+  background: white;
+  color: black;
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+/* ===========================
+   COLUMN WIDTH
+=========================== */
+
+/* Description */
+table.items th:nth-child(1),
+table.items td:nth-child(1){
+  width: 65%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Unit Price */
+table.items th:nth-child(2),
+table.items td:nth-child(2){
+  width: 12%;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Quantity */
+table.items th:nth-child(3),
+table.items td:nth-child(3){
+  width: 8%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Total */
+table.items th:nth-child(4),
+table.items td:nth-child(4){
+  width: 15%;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.client .title, .summary .title, table.items th, .help .title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.money, .number {
+  text-align: right;
+}
+
+.name {
+  color: #000080;
+}
+
+.address {
+  padding-bottom: 1em;
+}
+
+div.date-tag {
+  display: inline-block;
+  min-width: 80px;
+}
+
+div.top {
+  display: flex;
+  width: 100%;
+  padding: 0px;
+  justify-content: space-between;
+}
+
+/* Summary */
+
+.summary{
+    width:300px;
+    margin-left:auto;
+    margin-top:20px;
+}
+
+.summary-table{
+    width:100%;
+    border-collapse:collapse;
+    border:1px solid #c5c5c5;
+}
+
+.summary-table td{
+    padding:8px 12px;
+    border-bottom:1px solid #ddd;
+}
+
+.summary-table td:last-child{
+    text-align:right;
+}
+
+.summary-table .grand td{
+    border-top:2px solid #000;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.phone::before {
+  content: "\260e";
+  margin-right: 0.5em;
+}
+
+.email::before {
+  content: "\2709";
+  margin-right: 0.5em;  
+}
+
+.thanks {
+  text-align: right;
+  color: #C83200;
+  font-size: 200%;
+}
+
+div.instructions, .newlined, p.note {
+  white-space: pre-line;
+}
+
+div.paid {
+  position: relative;
+  left: 40%;
+  color: red;
+  rotate: 15deg;
+  font-size: 80px;
+  top: 20px;
+  border: 5px solid red;
+  float: left;
+  font-weight: bolder;
+}
+
+.app {
+  position: relative;
+}
+
+@media print {
+  div.print {
+    display: none;
+  }
+}
+
+div.print {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+div.print a {
+  background: #C83200;
+  display: block;
+  font-size: 200%;
+  color: white;
+  text-decoration: none;
+  padding: 0.25em;
+  padding-top: 0.5em;
+  padding-right: 0.5em;
+  border-top-right-radius: 0.5em;
+  text-transform: uppercase;
+}
+
+div.print a:hover {
+  background: #4682B4;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+div.column-name {
+  display: inline-block;
+}
+
+.column-name {
+  background: blue;
+  color: white;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 2px;
+  font-style: normal;
+}
+
+.column-recognized {
+  background: green;
+}
+
+.column-expected {
+  background: blue;
+}
+
+.column-ignored {
+  background: red;
+}
+
+.help {
+  padding: 1px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background: black;
+  color: white;
+}
+
+.help .details {
+  padding: 4px;
+}
+
+.help table {
+  border: none;
+}
+
+.help td.key {
+  text-align: right;
+}
+
+.help table {
+  padding-bottom: 3px;
+}
+
+.help-close {
+  display: float;
+  float: right;
+  max-width: 150px;
+  padding: 5px;
+  border-left: 1px solid white;
+  border-bottom-left-radius: 5px;
+  font-size: 80%;
+  font-style: italic;
+}
+
+.help pre {
+  display: inline-block;
+  background: #ddd;
+  color: #000;
+  padding: 0.25em;
+  margin-left: 1em;
+}
+
+.help .title {
+  margin-left: 4px;
+  text-transform: uppercase;
+}
+
+.status {
+  padding: 4px;
+}
+
+.status .button {
+  display: inline-block;
+  text-decoration: none;
+  color: #000080;
+  background: #ddd;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border-radius: 0.25em;
+}
