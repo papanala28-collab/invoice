@@ -129,25 +129,29 @@
 
 <div class="summary">
 
-  <div class="row">
-    <div class="title">Subtotal</div>
-    <div class="details">{{ invoice.Subtotal | currency }}</div>
-  </div>
+  <table class="summary-table">
 
-  <div class="row">
-    <div class="title">Deduction</div>
-    <div class="details">{{ invoice.Deduction | currency }}</div>
-  </div>
+    <tr>
+      <td>Subtotal</td>
+      <td>{{ invoice.Subtotal | currency }}</td>
+    </tr>
 
-  <div class="row">
-    <div class="title">Taxes</div>
-    <div class="details">{{ invoice.Taxes | currency }}</div>
-  </div>
+    <tr>
+      <td>Deduction</td>
+      <td>{{ invoice.Deduction | currency }}</td>
+    </tr>
 
-  <div class="row total-row">
-    <div class="title">Grand Total</div>
-    <div class="details">{{ invoice.Total | currency }}</div>
-  </div>
+    <tr>
+      <td>Taxes</td>
+      <td>{{ invoice.Taxes | currency }}</td>
+    </tr>
+
+    <tr class="grand">
+      <td>Grand Total</td>
+      <td>{{ invoice.Total | currency }}</td>
+    </tr>
+
+  </table>
 
 </div>
 
