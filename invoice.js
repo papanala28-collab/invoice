@@ -71,21 +71,24 @@ const data = {
 };
 let app = undefined;
 
-Vue.filter('currency', formatNumberAsUSD)
-function formatNumberAsUSD(value) {
-  if (typeof value !== "number") {
-    return value || '—';      // falsy value would be shown as a dash.
-  }
-  value = Math.round(value * 100) / 100;    // Round to nearest cent.
-  value = (value === -0 ? 0 : value);       // Avoid negative zero.
+Vue.filter('currency', formatNumberAsIDR);
 
-  const result = value.toLocaleString('en', {
-    style: 'currency', currency: 'USD'
-  })
-  if (result.includes('NaN')) {
+function formatNumberAsIDR(value) {
+
+  if (value === null || value === undefined || value === "") {
+    return "—";
+  }
+
+  const number = Number(value);
+
+  if (isNaN(number)) {
     return value;
   }
-  return result;
+
+  return "Rp. " + number.toLocaleString("id-ID", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  });
 }
 
 Vue.filter('fallback', function(value, str) {
@@ -179,8 +182,18 @@ function updateInvoice(row) {
     addDemo(row);
     if (!row.Subtotal && !row.Total && row.Items && Array.isArray(row.Items)) {
       try {
-        row.Subtotal = row.Items.reduce((a, b) => a + b.Price * b.Quantity, 0);
-        row.Total = row.Subtotal + (row.Taxes || 0) - (row.Deduction || 0);
+        row.Subtotal = row.Items.reduce((sum, item) => {
+
+  const qty = Number(item.Quantity) || 0;
+  const price = Number(item.Price) || 0;
+
+  return sum + (qty * price);
+
+}, 0);
+        row.Total =
+    row.Subtotal +
+    (Number(row.Taxes) || 0) -
+    (Number(row.Deduction) || 0);
       } catch (e) {
         console.error(e);
       }
@@ -223,7 +236,7 @@ ready(function() {
       }).catch(e => console.log(e));
     }
     if (msg.tableId) { app.tableConnected = true; }
-    if (msg.tableId && !msg.dataChange) { app.RowConnected = true; }
+    if (msg.tableId && !msg.dataChange) { app.rowConnected = true; }
   });
 
   Vue.config.errorHandler = function (err, vm, info)  {
