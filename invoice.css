@@ -50,14 +50,14 @@ a {
   padding: 1px;
   margin-top: 1em;
   margin-bottom: 1em;
-  background: #FFFFFF;
+  background: #000000;
   -webkit-print-color-adjust: exact !important;
   color-adjust: exact !important;
 }
 
-.client .title, .summary .title {
+.client .title, {
   margin-left: 4px;
-  color: #000000;
+  color: white;
   text-transform: uppercase;
 }
 
@@ -68,7 +68,7 @@ a {
 
 table.items {
   width: 100%;
-  border: 1px solid #ff8000;
+  border: 1px solid #000000;
   border-collapse: collapse;
 }
 
