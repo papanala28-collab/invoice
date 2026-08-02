@@ -117,7 +117,7 @@ div.top {
 /* Summary */
 
 div.summary {
-  width: 320px;
+  width: 260x;
   margin-top: 20px;
   margin-left: auto;
   border: 1px solid #000;
@@ -128,7 +128,8 @@ div.summary .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
+  padding: 8px 12px;
+  min-height: 26px; 
   border-bottom: 1px solid #ddd;
 }
 
