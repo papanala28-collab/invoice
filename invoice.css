@@ -115,46 +115,53 @@ div.top {
 }
 
 div.summary {
+  width: 320px;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-bottom: 1em;
+  border: 1px solid #000;
+  background: #fff;
+  padding: 0;
+}
+
+div.summary .part,
+div.summary .total {
   display: flex;
-  width: 100%;
-  padding: 0px;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
 }
 
-div.summary .part, div.summary .total {
-  padding: 10px;
-}
-
-div.summary .part {
-  width: 20%;
-  padding-right: 20px;
+div.summary .part:last-of-type {
+  border-bottom: none;
 }
 
 div.summary .total {
-  display: block;
-  flex-grow: 1;
-  background: #000080;
+  background: #fff;
+  color: #000;
+  border-top: 2px solid #000;
+  border-bottom: none;
   font-size: 140%;
+  font-weight: bold;
 }
 
-div.summary {
-  border-top-right-radius: 2em;
-  border-bottom-right-radius: 2em;
+div.summary .title,
+div.summary .details {
+  margin: 0;
 }
 
-div.summary .total {
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
+div.summary .title {
+  text-align: left;
 }
 
-div.summary .title, div.summary .details {
+div.summary .details {
   text-align: right;
 }
 
 div.summary::after {
-  content: '';
-  display: block;
-  clear: both;
+  display: none;
 }
 
 .phone::before {
