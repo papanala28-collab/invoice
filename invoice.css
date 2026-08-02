@@ -125,7 +125,7 @@ div.top {
 .summary-table{
     width:100%;
     border-collapse:collapse;
-    border:1px solid #000;
+    border:1px solid #c5c5c5;
 }
 
 .summary-table td{
