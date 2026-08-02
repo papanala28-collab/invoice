@@ -131,8 +131,8 @@ table.items td:nth-child(4){
 }
 
 .client .title, .summary .title, table.items th, .help .title {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .money, .number {
