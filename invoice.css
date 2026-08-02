@@ -20,7 +20,7 @@ a {
 }
 
 .header .title {
-  font-size: 300%;
+  font-size: 200%;
   font-weight: bold;
 }
 
@@ -100,7 +100,7 @@ table.items td {
 /* Description */
 table.items th:nth-child(1),
 table.items td:nth-child(1){
-  width: 65%;
+  width: 55%;
   white-space: normal;
   overflow-wrap: break-word;
   word-break: break-word;
@@ -109,7 +109,7 @@ table.items td:nth-child(1){
 /* Unit Price */
 table.items th:nth-child(2),
 table.items td:nth-child(2){
-  width: 12%;
+  width: 20%;
   text-align: right;
   white-space: nowrap;
 }
@@ -117,7 +117,7 @@ table.items td:nth-child(2){
 /* Quantity */
 table.items th:nth-child(3),
 table.items td:nth-child(3){
-  width: 8%;
+  width: 5%;
   text-align: center;
   white-space: nowrap;
 }
@@ -125,7 +125,7 @@ table.items td:nth-child(3){
 /* Total */
 table.items th:nth-child(4),
 table.items td:nth-child(4){
-  width: 15%;
+  width: 20%;
   text-align: right;
   white-space: nowrap;
 }
