@@ -71,20 +71,27 @@ const data = {
 };
 let app = undefined;
 
-Vue.filter('currency', formatNumberAsUSD)
-function formatNumberAsUSD(value) {
-  if (typeof value !== "number") {
-    return value || '—';      // falsy value would be shown as a dash.
-  }
-  value = Math.round(value * 100) / 100;    // Round to nearest cent.
-  value = (value === -0 ? 0 : value);       // Avoid negative zero.
+Vue.filter('currency', formatNumberAsIDR)
 
-  const result = value.toLocaleString('en', {
-    style: 'currency', currency: 'USD'
-  })
+function formatNumberAsIDR(value) {
+  if (typeof value !== "number") {
+    return value || "—";
+  }
+
+  value = Math.round(value);
+  value = (value === -0 ? 0 : value);
+
+  const result = value.toLocaleString('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0
+  });
+
   if (result.includes('NaN')) {
     return value;
   }
+
   return result;
 }
 
