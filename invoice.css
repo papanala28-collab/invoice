@@ -117,8 +117,8 @@ div.top {
 /* Summary */
 
 div.summary {
-  width: 260x;
-  margin-top: 20px;
+  width: 260px;          /* sebelumnya 320px */
+  margin-top: 10px;
   margin-left: auto;
   border: 1px solid #000;
   background: #fff;
@@ -128,8 +128,8 @@ div.summary .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px;
-  min-height: 26px; 
+  padding: 8px 12px;     /* sebelumnya 10px 15px */
+  min-height: 26px;      /* supaya tidak terlalu tinggi */
   border-bottom: 1px solid #ddd;
 }
 
@@ -138,19 +138,27 @@ div.summary .row:last-child {
 }
 
 div.summary .title {
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 600;
   color: #000;
 }
 
 div.summary .details {
+  font-size: 14px;
   color: #000;
   text-align: right;
 }
 
 div.summary .total-row {
   border-top: 2px solid #000;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
+}
+
+div.summary .total-row .title,
+div.summary .total-row .details {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .phone::before {
