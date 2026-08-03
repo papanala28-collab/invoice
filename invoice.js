@@ -103,11 +103,9 @@ Vue.filter('asDate', function(value) {
     value = new Date(value * 1000);
   }
 
-  moment.locale('id');   // Bahasa Indonesia
-
   const date = moment.utc(value);
   return date.isValid()
-    ? date.format('DD MMMM YYYY')
+    ? date.format('DD/MM/YYYY')
     : value;
 });
 
