@@ -14,7 +14,7 @@ function addDemo(row) {
     for (const key of ['Number', 'Issued', 'Due']) {
       if (!(key in row)) { row[key] = key; }
     }
-    for (const key of ['Subtotal', 'Deduction', 'PPn', 'Total']) {
+    for (const key of ['Subtotal', 'PPh', 'PPn', 'Total']) {
       if (!(key in row)) { row[key] = key; }
     }
     if (!('Note' in row)) { row.Note = '(Anything in a Note column goes here)'; }
@@ -161,7 +161,7 @@ function updateInvoice(row) {
     const want = new Set(Object.keys(addDemo({})));
     const accepted = new Set(['References']);
     const importance = ['Number', 'Client', 'Items', 'Total', 'Invoicer', 'Due', 
-                        'Issued', 'Subtotal', 'Deduction', 'PPn', 'Note', 'Paid'];
+                        'Issued', 'Subtotal', 'PPh', 'PPn', 'Note', 'Paid'];
     if (!('Due' in row || 'Issued' in row)) {
       const seen = new Set(Object.keys(row).filter(k => k !== 'id' && k !== '_error_'));
       const help = row.Help = {};
@@ -196,7 +196,7 @@ function updateInvoice(row) {
         row.Total =
     row.Subtotal +
     (Number(row.PPn) || 0) -
-    (Number(row.Deduction) || 0);
+    (Number(row.PPh) || 0);
       } catch (e) {
         console.error(e);
       }
