@@ -136,9 +136,9 @@
       <td>{{ invoice.Subtotal | currency }}</td>
     </tr>
 
-    <tr v-if="invoice.Deduction > 0">
-      <td>Deduction</td>
-      <td>{{ invoice.Deduction | currency }}</td>
+    <tr v-if="invoice.PPh > 0">
+      <td>PPh</td>
+      <td>{{ invoice.PPh | currency }}</td>
     </tr>
 
     <tr>
